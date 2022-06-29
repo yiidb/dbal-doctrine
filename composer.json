@@ -1,0 +1,52 @@
+{
+    "name": "yiidb/dbal-doctrine",
+    "type": "library",
+    "description": "PHP Database abstraction layer (DBAL for Yii)",
+    "keywords": [
+        "yii",
+        "doctrine",
+        "dbal"
+    ],
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/yiidb/dbal-doctrine/issues?state=open",
+        "source": "https://github.com/yiidb/dbal-doctrine"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.1",
+        "doctrine/dbal": "^4.0-dev",
+        "yiidb/dbal": "^1.0-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "YiiDb\\DBAL\\Doctrine\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "YiiDb\\DBAL\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        },
+        "config-plugin-options": {
+            "source-directory": "config"
+        },
+        "config-plugin": {
+            "params": "params.php",
+            "common": "common.php",
+            "console": "console.php"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --testdox --no-interaction",
+        "test-watch": "phpunit-watcher watch"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
